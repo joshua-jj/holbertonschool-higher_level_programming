@@ -68,7 +68,7 @@ class Square:
         Returns:
             True or False
         """
-        return self.data < other.data
+        return self.size < other.size
 
     def __le__(self, other):
         """Compare if square is less than or equal to another by area
@@ -79,7 +79,7 @@ class Square:
         Returns:
             True or False
         """
-        return self.data <= other.data
+        return self.size <= other.size
 
     def __eq__(self, other):
         """Compare if square is equal to another by area
@@ -90,7 +90,7 @@ class Square:
         Returns:
             True or False
         """
-        return self.data == other.data
+        return self.size == other.size
 
     def __ne__(self, other):
         """Compare if square is not equal to another by area
@@ -101,7 +101,7 @@ class Square:
         Returns:
             True or False
         """
-        return self.data != other.data
+        return self.size != other.size
 
     def __ge__(self, other):
         """Compare if square is greater than or equal to another by area
@@ -112,7 +112,7 @@ class Square:
         Returns:
             True or False
         """
-        return self.data >= other.data
+        return self.size >= other.size
 
     def __gt__(self, other):
         """Compare if square is greater than another by area
@@ -123,4 +123,4 @@ class Square:
         Returns:
             True or False
         """
-        return self.data > other.data
+        return self.size > other.size
