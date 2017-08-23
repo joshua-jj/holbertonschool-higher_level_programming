@@ -2,9 +2,9 @@
 """Defines a class MagicClass"""
 
 
+import math
 class MagicClass:
-    """This represents a circle
-    Attributes: __radius (int/float): radius of the circle"""
+    """This represents a circle"""
     def __init__(self, radius):
         """Initializes the Magic Class"""
         self.__radius = 0
