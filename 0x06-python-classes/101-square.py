@@ -116,7 +116,7 @@ class Square:
             Formatted string representing the square
         """
         if self.size == 0:
-            return "\n"
-        string = "\n" * self.position[1] + (" " * self.position[0] + \
-                                             "#" * self.size + "\n") * self.size
+            return ""
+        string = "\n" * self.position[1] + (" " * self.position[0] +
+                                            "#" * self.size + "\n") * self.size
         return string[:-1]
