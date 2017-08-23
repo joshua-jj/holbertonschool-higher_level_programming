@@ -76,6 +76,7 @@ class Node:
             """
             return str(self.__data)
 
+
 class SinglyLinkedList:
     """Represents a single linked list
 
