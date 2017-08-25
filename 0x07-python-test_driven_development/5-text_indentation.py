@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """
+This is the "5-test_indentation" module.
 
+The 5-text_indentation  module supplies one function, say_my_name(first_name, last_name="").        
 """
 
 
 def text_indentation(text):
-    """"""
+    """splits a text into lines along "?", ":", "." followed by two new lines"""
     if type(text) is not str:
         raise TypeError("text must be a string")
     flag = 0
@@ -22,5 +24,3 @@ def text_indentation(text):
                 flag = 0
             else:
                 print(a, end="")
-    if flag == 1:
-        print("\n")
