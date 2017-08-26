@@ -1,5 +1,5 @@
-#!/usr/bin/python3                                                                                                                                       
-"""Unittest for max_integer([..])                                                                                                                        
+#!/usr/bin/python3
+"""Unittest for max_integer([..])
 """
 import unittest
 max_integer = __import__('6-max_integer').max_integer
@@ -58,7 +58,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_none(self):
         """Tests for passing none as argument"""
-        with self.assertRaises(TypeError): 
+        with self.assertRaises(TypeError):
             max_integer(None)
 
     def test_non_int_arg(self):

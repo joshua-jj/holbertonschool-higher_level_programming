@@ -2,7 +2,7 @@
 """
 This is the "4-print_square" module.
 
-The 4-print_square  module supplies one function, say_my_name(first_name, last_name=""). 
+The 4-print_square  module supplies one function, print_square(size).
 """
 
 
