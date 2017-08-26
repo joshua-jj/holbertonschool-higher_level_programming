@@ -148,6 +148,12 @@ Checking for nx1 matrix:
 	 >>> matrix
 	 [[1], [2], [3]]
 
+Checking for no args:
+	 >>> matrix_divided()
+         Traceback (most recent call last):
+         ...
+         TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
 Checking for 1 arg:
 	 >>> matrix_divided(matrix)
 	 Traceback (most recent call last):

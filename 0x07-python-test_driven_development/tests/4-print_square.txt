@@ -17,6 +17,18 @@ Checking for function docstring:
          >>> len(f) > 1
          True
 
+Checking for no args:
+	 >>> print_square()
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: print_square() missing 1 required positional argument: 'size'
+
+Checking for too many args
+	 >>> print_square(1, 2)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: print_square() takes 1 positional argument but 2 were given
+
 Checking for passing None:
 	 >>> print_square(None)
 	 Traceback (most recent call last):
