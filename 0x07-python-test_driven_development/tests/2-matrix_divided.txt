@@ -148,6 +148,19 @@ Checking for nx1 matrix:
 	 >>> matrix
 	 [[1], [2], [3]]
 
+Checking for division by infinity:
+	 >>> matrix_divided(matrix, float('inf'))
+	 [[0.0], [0.0], [0.0]]
+
+Checking for division with infinity in numerator:
+	 >>> matrix = [[1, float('inf'), 3], [4, 5, 6]]
+	 >>> matrix_divided(matrix, 1)
+         [[1.0, inf, 3.0], [4.0, 5.0, 6.0]]
+
+Checking for division with infinity in numerator and denomenator
+	 >>> matrix_divided(matrix, float('inf'))
+	 [[0.0, nan, 0.0], [0.0, 0.0, 0.0]]
+
 Checking for no args:
 	 >>> matrix_divided()
          Traceback (most recent call last):
