@@ -1,0 +1,45 @@
+The ``1-my_list`` module
+======================
+
+Using ``MyList``
+-------------------
+
+Importing the function from the module:
+        >>> MyList = __import__("1-my_list").MyList
+
+Checking for module docstring:
+         >>> m = __import__("1-my_list").__doc__
+         >>> len(m) > 1
+         True
+
+Checking for class docstring:
+         >>> c = __import__("1-my_list").MyList.__doc__
+         >>> len(c) > 1
+         True
+
+Checking for method docstring:
+	 >>> mod = __import__("1-my_list").MyList.print_sorted.__doc__
+	 >>> len(mod) > 1
+	 True
+
+Checking that MyList inherits from list:
+
+Checking for empty list:
+
+Checking that appendng works:
+
+Checking for list already in correct order:
+
+Checking for reversed order list:
+
+Checking for largest number in middle:
+
+Checking for largest number in beginning:
+
+Checking for largest number at end:
+
+Checking for smallest number at beginning:
+
+Checking for bools:
+
+Checking for non-number types:
