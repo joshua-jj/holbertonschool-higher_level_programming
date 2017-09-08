@@ -23,4 +23,3 @@ except KeyboardInterrupt:
     for key in status_codes:
         if status_tally[key]:
             print("{:s}: {:d}".format(key, status_tally[key]))
-    raise
