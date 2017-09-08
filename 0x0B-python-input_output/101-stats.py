@@ -18,6 +18,11 @@ try:
             for key in status_codes:
                 if status_tally[key]:
                     print("{:s}: {:d}".format(key, status_tally[key]))
+    print("File size: {:d}".format(file_size))
+            for key in status_codes:
+                if status_tally[key]:
+                    print("{:s}: {:d}".format(key, status_tally[key]))
+
 except KeyboardInterrupt:
     print("File size: {:d}".format(file_size))
     for key in status_codes:
