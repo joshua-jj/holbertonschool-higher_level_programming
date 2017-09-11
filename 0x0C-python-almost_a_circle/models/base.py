@@ -3,7 +3,6 @@
 This module contains the "Base" class
 """
 
-
 class Base:
     """A base class"""
     __nb_objects = 0
@@ -37,13 +36,30 @@ class Base:
     def save_to_file(cls, list_objs):
         """writes the JSON string representation of list_objs to a file"""
         filename = cls.__name__ + ".json"
-        if list_objs is None:
-            list_objs = []
-        for i in range(len(list_objs)):
-            list_objs[i] = cls.to_dictionary(list_objs[i])
+        lo = []
+        for i in list_objs:
+            lo.append(cls.to_dictionary(i))
         with open(filename, 'w') as f:
-            f.write(cls.to_json_string(list_objs))
+            f.write(cls.to_json_string(lo))
 
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
+        if cls.__name__ is "Rectangle":
+            from rectangle import Rectangle
+            dummy = Rectangle(1, 1)
+        elif cls.__name__ is "Square":
+            from square import Square
+            dummy = Square(1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + ".json"
+        l = []
+        with open(filename, 'r') as f:
+            l = cls.from_json_string(f.read())
+        for i, e in enumerate(l):
+            l[i] = cls.create(**l[i])
+        return l
