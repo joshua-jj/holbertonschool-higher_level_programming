@@ -3,10 +3,10 @@
 This module contains the "Base" class
 """
 
+
 class Base:
     """A base class"""
     __nb_objects = 0
-
 
     def __init__(self, id=None):
         """Initialize the base class"""
