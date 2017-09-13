@@ -47,11 +47,9 @@ class Base:
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
         if cls.__name__ is "Rectangle":
-            from rectangle import Rectangle
-            dummy = Rectangle(1, 1)
+            dummy = cls(1, 1)
         elif cls.__name__ is "Square":
-            from square import Square
-            dummy = Square(1)
+            dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
 
