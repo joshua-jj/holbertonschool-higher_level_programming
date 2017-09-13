@@ -8,6 +8,7 @@ import pep8
 import inspect
 import io
 import json
+import os
 from contextlib import redirect_stdout
 from models import rectangle
 from models.base import Base
@@ -361,6 +362,40 @@ class TestRectangle(unittest.TestCase):
         r2c = Rectangle.create(**r2)
         self.assertEqual("[Rectangle] (2) 4/0 - 2/3", str(r1c))
         self.assertEqual("[Rectangle] (9) 7/8 - 5/6", str(r2c))
+        self.assertIsNot(r1, r1c)
+        self.assertIsNot(r2, r2c)
+        self.assertNotEqual(r1, r1c)
+        self.assertNotEqual(r2, r2c)
+
+    def test_load_from_file_no_file(self):
+        """Checks use of load_from_file with no file"""
+        try:
+            os.remove("Rectangle.json")
+        except:
+            pass
+        self.assertEqual(Rectangle.load_from_file(), [])
+
+    def test_load_from_file_empty_file(self):
+        """Checks use of load_from_file with empty file"""
+        try:
+            os.remove("Rectangle.json")
+        except:
+            pass
+        open("Rectanlge.json", 'a').close()
+        self.assertEqual(Rectangle.load_from_file(), [])
+
+    def test_load_from_file(self):
+        """test normal use of load_from_file"""
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        r2 = Rectangle(6, 7, 8, 9, 10)
+        li = [r1, r2]
+        Rectangle.save_to_file(li)
+        lo = Rectangle.load_from_file()
+        print(lo)
+        r1c = lo[0]
+        r2c = lo[1]
+        self.assertEqual(str(r1), str(r1c))
+        self.assertEqual(str(r2), str(r2c))
         self.assertIsNot(r1, r1c)
         self.assertIsNot(r2, r2c)
         self.assertNotEqual(r1, r1c)
