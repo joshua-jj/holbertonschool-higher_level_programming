@@ -6,6 +6,7 @@ This module contains the "Base" class
 import csv
 import json
 
+
 class Base:
     """A base class"""
     __nb_objects = 0
@@ -90,8 +91,10 @@ class Base:
                 csv_reader = csv.reader(csvfile)
                 for args in csv_reader:
                     if cls.__name__ is "Rectangle":
-                        dictionary = {"id": int(args[0]), "width": int(args[1]),
-                                      "height": int(args[2]), "x": int(args[3]),
+                        dictionary = {"id": int(args[0]),
+                                      "width": int(args[1]),
+                                      "height": int(args[2]),
+                                      "x": int(args[3]),
                                       "y": int(args[4])}
                     elif cls.__name__ is "Square":
                         dictionary = {"id": int(args[0]), "size": int(args[1]),
