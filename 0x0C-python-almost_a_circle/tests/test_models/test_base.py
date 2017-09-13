@@ -48,6 +48,11 @@ class TestBaseDocs(unittest.TestCase):
 
 class TestBase(unittest.TestCase):
     """Tests to check functionality of Base class"""
+    def test_too_many_args(self):
+        """test too many args to init"""
+        with self.assertRaises(TypeError):
+            b = Base(1, 1)
+
     def test_no_id(self):
         """Tests id as None"""
         b = Base()
@@ -86,6 +91,8 @@ class TestBase(unittest.TestCase):
         json_s = Base.to_json_string([])
         self.assertTrue(type(json_s) is str)
         self.assertEqual(json_s, "[]")
+
+    def test_None_to_json_String(self):
         json_s = Base.to_json_string(None)
         self.assertTrue(type(json_s) is str)
         self.assertEqual(json_s, "[]")
@@ -96,6 +103,7 @@ class TestBase(unittest.TestCase):
 {"id": 2, "width": 2, "height": 3, "x": 4, "y": 0}]'
         json_l = Base.from_json_string(json_str)
         self.assertTrue(type(json_l) is list)
+        self.assertEqual(len(json_l), 2)
         self.assertTrue(type(json_l[0]) is dict)
         self.assertTrue(type(json_l[1]) is dict)
         self.assertEqual(json_l[0],

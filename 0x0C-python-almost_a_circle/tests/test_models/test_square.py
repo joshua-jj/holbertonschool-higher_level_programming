@@ -109,40 +109,40 @@ class TestSquare(unittest.TestCase):
 
     def test_size_typeerror(self):
         """Test non-ints for size"""
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             s = Square("hello")
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             s = Square(True)
 
     def test_x_typeerror(self):
         """Test non-ints for x"""
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             s = Square(1, "hello")
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             s = Square(1, True)
 
     def test_y_typeerror(self):
         """Test non-ints for y"""
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             s = Square(1, 1, "hello")
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             s = Square(1, 1, True)
 
     def test_size_valueerror(self):
         """Test ints <= 0 for size"""
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             s = Square(-1)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             s = Square(0)
 
     def test_x_valueerror(self):
         """Test ints < 0 for x"""
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             s = Square(1, -1)
 
     def test_y_valueerror(self):
         """Test ints <= 0 for y"""
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             s = Square(1, 1, -1)
 
     def test_area(self):
@@ -168,6 +168,11 @@ class TestSquare(unittest.TestCase):
             s.display()
             output = buf.getvalue()
             self.assertEqual(output, ("#" * 3 + "\n") * 3)
+
+    def test_display_too_many_args(self):
+        """Test display with too many args"""
+        with self.assertRaises(TypeError):
+            self.s1.display(1)
 
     def test_str(self):
         """Test the __str__ method"""
@@ -358,9 +363,12 @@ class TestSquare(unittest.TestCase):
         li = [s1, s2]
         Square.save_to_file(li)
         lo = Square.load_from_file()
-        print(lo)
+        self.assertTrue(type(lo) is list)
+        self.assertEqual(len(lo), 2)
         s1c = lo[0]
         s2c = lo[1]
+        self.assertTrue(type(s1c) is Square)
+        self.assertTrue(type(s2c) is Square)
         self.assertEqual(str(s1), str(s1c))
         self.assertEqual(str(s2), str(s2c))
         self.assertIsNot(s1, s1c)

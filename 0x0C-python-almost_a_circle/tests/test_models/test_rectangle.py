@@ -108,54 +108,54 @@ class TestRectangle(unittest.TestCase):
 
     def test_width_typeerror(self):
         """Test non-ints for width"""
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             r = Rectangle("hello", 1)
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             r = Rectangle(True, 1)
 
     def test_height_typeerror(self):
         """Test non-ints for height"""
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
             r = Rectangle(1, "hello")
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
             r = Rectangle(1, True)
 
     def test_x_typeerror(self):
         """Test non-ints for x"""
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             r = Rectangle(1, 1, "hello")
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             r = Rectangle(1, 1, True)
 
     def test_y_typeerror(self):
         """Test non-ints for y"""
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             r = Rectangle(1, 1, 1, "hello")
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             r = Rectangle(1, 1, 1, True)
 
     def test_width_valueerror(self):
         """Test ints <= 0 for width"""
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             r = Rectangle(-1, 1)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             r = Rectangle(0, 1)
 
     def test_height_valueerror(self):
         """Test ints <= 0 for height"""
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
             r = Rectangle(1, -1)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
             r = Rectangle(1, 0)
 
     def test_x_valueerror(self):
         """Test ints < 0 for x"""
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             r = Rectangle(1, 1, -1)
 
     def test_y_valueerror(self):
         """Test ints <= 0 for y"""
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             r = Rectangle(1, 1, 1, -1)
 
     def test_area(self):
@@ -181,6 +181,11 @@ class TestRectangle(unittest.TestCase):
             r.display()
             output = buf.getvalue()
             self.assertEqual(output, ("#" * 2 + "\n") * 3)
+
+    def test_display_too_many_args(self):
+        """Test display with too many args"""
+        with self.assertRaises(TypeError):
+            self.r1.display(1)
 
     def test_str(self):
         """Test the __str__ method"""
@@ -226,25 +231,25 @@ class TestRectangle(unittest.TestCase):
     def test_update_args_setter(self):
         """tests that the update method uses setter with *args"""
         r = Rectangle(1, 1, 0, 0, 1)
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             r.update(1, "hello")
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
             r.update(1, 1, "hello")
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             r.update(1, 1, 1, "hello")
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             r.update(1, 1, 1, 1, "hello")
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             r.update(1, 0)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             r.update(1, -1)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
             r.update(1, 1, 0)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
             r.update(1, 1, -1)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             r.update(1, 1, 1, -1)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             r.update(1, 1, 1, 1, -1)
 
     def test_update_too_many_args(self):
@@ -381,7 +386,7 @@ class TestRectangle(unittest.TestCase):
             os.remove("Rectangle.json")
         except:
             pass
-        open("Rectanlge.json", 'a').close()
+        open("Rectangle.json", 'a').close()
         self.assertEqual(Rectangle.load_from_file(), [])
 
     def test_load_from_file(self):
@@ -391,9 +396,12 @@ class TestRectangle(unittest.TestCase):
         li = [r1, r2]
         Rectangle.save_to_file(li)
         lo = Rectangle.load_from_file()
-        print(lo)
+        self.assertTrue(type(lo) is list)
+        self.assertEqual(len(lo), 2)
         r1c = lo[0]
         r2c = lo[1]
+        self.assertTrue(type(r1c) is Rectangle)
+        self.assertTrue(type(r2c) is Rectangle)
         self.assertEqual(str(r1), str(r1c))
         self.assertEqual(str(r2), str(r2c))
         self.assertIsNot(r1, r1c)
