@@ -14,11 +14,11 @@ This project is a review of everything learned in Python up until 09/13/17:
 * Serialization/Deserialization
 * JSON
 ## File Structure
-* (models)[models]
-  * (base.py)[base.py]
-  * (rectangle.py)[rectangle.py]
-* (tests)[tests]
-  * (test_models)[test_models]
-    * (test_base.py)[test_base.py]
-    * (test_rectangle.py)[test_rectangle.py]
-    * (test_square.py)[test_square.py]
+* [models](models)
+  * [base.py](base.py)
+  * [rectangle.py](rectangle.py)
+* [tests](tests)
+  * [test_models](test_models)
+    * [test_base.py](test_base.py)
+    * [test_rectangle.py](test_rectangle.py)
+    * [test_square.py](test_square.py)
