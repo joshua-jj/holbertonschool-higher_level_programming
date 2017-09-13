@@ -319,3 +319,16 @@ class TestSquare(unittest.TestCase):
         Square.save_to_file(None)
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
+
+    def test_create(self):
+        """test normal use of create"""
+        s1 = {"id": 2, "size": 3, "x": 4, "y": 0}
+        s2 = {"id": 9, "size": 6, "x": 7, "y": 8}
+        s1c = Square.create(**s1)
+        s2c = Square.create(**s2)
+        self.assertEqual("[Square] (2) 4/0 - 3", str(s1c))
+        self.assertEqual("[Square] (9) 7/8 - 6", str(s2c))
+        self.assertIsNot(s1, s1c)
+        self.assertIsNot(s2, s2c)
+        self.assertNotEqual(s1, s1c)
+        self.assertNotEqual(s2, s2c)

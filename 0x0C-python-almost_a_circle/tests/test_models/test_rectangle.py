@@ -352,3 +352,16 @@ class TestRectangle(unittest.TestCase):
         Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as f:
             self.assertEqual("[]", f.read())
+
+    def test_create(self):
+        """test normal use of create"""
+        r1 = {"id": 2, "width": 2, "height": 3, "x": 4, "y": 0}
+        r2 = {"id": 9, "width": 5, "height": 6, "x": 7, "y": 8}
+        r1c = Rectangle.create(**r1)
+        r2c = Rectangle.create(**r2)
+        self.assertEqual("[Rectangle] (2) 4/0 - 2/3", str(r1c))
+        self.assertEqual("[Rectangle] (9) 7/8 - 5/6", str(r2c))
+        self.assertIsNot(r1, r1c)
+        self.assertIsNot(r2, r2c)
+        self.assertNotEqual(r1, r1c)
+        self.assertNotEqual(r2, r2c)
