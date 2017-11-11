@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-creates the State California with the City San Francisco from the database
+lists all State objects and corresponding City objects contained in a database
 """
 
 import sqlalchemy
