@@ -16,4 +16,4 @@ if __name__ == '__main__':
         people = r.json()
         for person in people.get('results'):
             print(person.get('name'))
-        next_page = person.get('next')
+        next_page = people.get('next')
