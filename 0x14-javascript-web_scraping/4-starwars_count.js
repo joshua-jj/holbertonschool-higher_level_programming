@@ -4,7 +4,7 @@ const url = process.argv[2];
 const wedge = 'https://swapi.co/api/people/18/';
 request(url, function (err, response, body) {
   if (err) {
-    console.lof(err);
+    console.log(err);
   } else if (response.statusCode === 200) {
     let films = JSON.parse(body).results;
     let count = 0;
