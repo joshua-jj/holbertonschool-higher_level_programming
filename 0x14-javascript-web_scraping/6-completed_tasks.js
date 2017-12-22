@@ -10,11 +10,11 @@ request(url, function (err, response, body) {
     for (let i in tasks) {
       let task = tasks[i];
       if (task.completed === true) {
-	if (completed[task.userId] === undefined) {
+        if (completed[task.userId] === undefined) {
           completed[task.userId] = 1;
-	} else {
+        } else {
           completed[task.userId]++;
-	}
+        }
       }
     }
     console.log(completed);
