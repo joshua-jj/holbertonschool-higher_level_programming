@@ -5,7 +5,7 @@ const wedge = 'https://swapi.co/api/people/18/';
 request(url, function (err, response, body) {
   if (err) {
     console.log(err);
-  } else if (response.statusCode === 200) {
+  } else {
     let films = JSON.parse(body).results;
     let count = 0;
     for (let filmIndex in films) {
@@ -15,7 +15,5 @@ request(url, function (err, response, body) {
       }
     }
     console.log(count);
-  } else {
-    console.log('An error occured. Status code: ' + response.statusCode);
   }
 });
