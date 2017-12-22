@@ -9,11 +9,12 @@ request(url, function (err, response, body) {
     let tasks = JSON.parse(body);
     for (let i in tasks) {
       let task = tasks[i];
-      if (completed[task.userId] === undefined) {
-        completed[task.userId] = 0;
-      }
       if (task.completed === true) {
-        completed[task.userId]++;
+	if (completed[task.userId] === undefined) {
+          completed[task.userId] = 1;
+	} else {
+          completed[task.userId]++;
+	}
       }
     }
     console.log(completed);
