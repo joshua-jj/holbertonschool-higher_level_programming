@@ -10,6 +10,7 @@ An introductory project on:
 - Python 3.4
 - pep8 1.7
 ## File Descriptions
+### Mandatory
 **[0-add.py](0-add.py)** - imports the function `def add(a, b):` from the file `add_0.py` and prints the result of the addition `1 + 2 = 3`
   * should not be executed when imported
 
