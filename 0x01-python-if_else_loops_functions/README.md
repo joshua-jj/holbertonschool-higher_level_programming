@@ -28,7 +28,7 @@ An introductory project on:
       - if the number is 0: `is zero`
       - if the number is less than 0: `is negative`
     - followed by a new line
-</br>
+
 **[1-last_digit.py](./1-last_digit.py)** - This program will assign a random signed number to the variable `number` each time it is executed. Complete the [source code](https://intranet.hbtn.io/rltoken/e9k9---MJXcMmIjlMdlBpw) in order to print the last digit of the number stored in the variable `number`.
   - The variable `number` will store a different value every time you run this program
   - The output of the program should be:
@@ -39,17 +39,20 @@ An introductory project on:
       - if the number is 0: the string `and is 0`
       - if the number is less than 6 and not 0: the string `and is less than 6 and not 0`
     - followed by a new line
+
 **[2-print_alphabet.py](./2-print_alphabet.py)** - Write a program that prints the alphabet, in lowercase, not followed by a new line.
   - You can only use one `print` function with string format
   - You can only use one loop in your code
   - You are not allowed to store characters in a variable
   - You are not allowed to import any module
+
 **[3-print_alphabt.py](./3-print_alphabt.py)** - Write a program that prints the alphabet, in lowercase, not followed by a new line.
   - Print all the letters except `q` and `e`
   - You can only use one `print` function with string format
   - You can only use one loop in your code
   - You are not allowed to store characters in a variable
   - You are not allowed to import any module
+
 **[4-print_hexa.py](./4-print_hexa.py)** - Write a program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example)
   - You can only use one `print` function with string format
   - You can only use one loop in your code
@@ -64,16 +67,24 @@ An introductory project on:
   98 = 0x62
   ```
 
-
 **[5-print_comb2.py](./5-print_comb2.py)** - 
+
 **[6-print_comb3.py](./6-print_comb3.py)** - 
+
 **[7-islower.py](./7-islower.py)** - 
+
 **[8-uppercase.py](./8-uppercase.py)** - 
+
 **[9-print_last_digit.py](./9-print_last_digit.py)** - 
+
 **[10-add.py](./10-add.py)** - 
+
 **[11-pow.py](./11-pow.py)** - 
+
 **[12-fizzbuzz.py](./12-fizzbuzz.py)** - 
 ### Advanced
 **[100-print_tebahpla.py](./100-print_tebahpla.py)** - 
+
 **[101-remove_char_at.py](./101-remove_char_at.py)** - 
-2. [102-magic_calculation.py](./102-magic_calculation.py) - 
+
+**[102-magic_calculation.py](./102-magic_calculation.py)** - 
