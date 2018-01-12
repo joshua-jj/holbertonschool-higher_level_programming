@@ -6,7 +6,7 @@ An introductory project on:
 - Indexing and slicing in Python
 - How to check your code with `PEP 8`
 ## Requirements
-- python 3.4
+- Python 3.4
 - pep8 1.7
 ## File Descriptions
 ### Mandatory
