@@ -16,7 +16,7 @@ An introductory project on:
 - Arithmetic operators and how to use them
 
 ## Requirements
-- python 3.4
+- Python 3.4
 - pep8 1.7
 ## File Descriptions
 ### Mandatory
