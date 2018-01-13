@@ -1,4 +1,5 @@
 # 0x01. Python - if/else, loops, functions
+## About
 An introductory project on:
 - How to use the `if`, `if ... else` statements
 - How to use comments
