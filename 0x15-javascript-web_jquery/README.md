@@ -322,8 +322,43 @@ Please test with this [HTML file](html_files/100-main.html) in your browser:
 </html>
 ```
 
+**[101-script.js](101-script.js)** - Write a Javascript script that adds, removes and clears `LI` elements from a list when the user clicks:
+- The new element must be: `<li>Item</li>`
+- The new element must be added to `UL.my_list`
+- When the user clicks on `DIV#add_item`: a new element is added to the list
+- When the user clicks on `DIV#remove_item`: a last element is removed to the list
+- When the user clicks on `DIV#clear_list`: all elements of the list are removed
+- You can’t use `document.querySelector` to select the HTML tag
+- You must use the jQuery API
+- Your script must work when it is imported from the `HEAD` tag
 
-**[101-script.js](101-script.js)** - 
+Please test with this [HTML file](html_files/101-main.html) in your browser:
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="101-script.js"></script>
+  </head>
+  <body>
+    <header> 
+      First HTML page
+    </header>
+    <br />
+    <div id="add_item">Add item</div>
+    <div id="remove_item">Remove item</div>
+    <div id="clear_list">Clear list</div>
+    <br />
+    <ul class="my_list">
+      <li>Item</li>
+    </ul>
+    <footer>
+      Holberton School - 2017
+    </footer>
+  </body>
+</html>
+```
 
 **[102-script.js](102-script.js)** - 
 
