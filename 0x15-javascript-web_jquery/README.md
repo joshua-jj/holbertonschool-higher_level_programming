@@ -342,7 +342,7 @@ Please test with this [HTML file](html_files/101-main.html) in your browser:
     <script type="text/javascript" src="101-script.js"></script>
   </head>
   <body>
-    <header> 
+    <header>
       First HTML page
     </header>
     <br />
@@ -360,6 +360,38 @@ Please test with this [HTML file](html_files/101-main.html) in your browser:
 </html>
 ```
 
-**[102-script.js](102-script.js)** - 
+**[102-script.js](102-script.js)** - Write a Javascript script that fetches and prints the wind speed by using this URL: `https://query.yahooapis.com/v1/public/yql?q=select%20wind%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22:city_name%22)&format=json`
+- The wind speed must be displayed in the HTML tag `DIV#wind_speed`
+- The city name must be the value of the tag `INPUT#city_search`
+- The wind speed must be fetch when the user clicks on `INPUT#btn_search`
+- You can’t use `document.querySelector` to select the HTML tag
+- You must use the jQuery API
+- Your script must work when it is imported from the `HEAD` tag
+
+Please test with this [HTML file](html_files/102-main.html) in your browser:
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="102-script.js"></script>
+  </head>
+  <body>
+    <header>
+      Wind speed
+    </header>
+    <br />
+    <input id="city_search" type="text" placeholder="City"/>
+    <input id="btn_search" type="button" value="Search"/>
+    <br />
+    <div id="wind_speed"></div>
+    <br />
+    <footer>
+      Holberton School - 2017
+    </footer>
+  </body>
+</html>
+```
 
 **[103-script.js](103-script.js)** - 
