@@ -20,7 +20,7 @@ An introductory project on:
 - You must use `document.querySelector` to select the HTML tag
 - You can’t use the jQuery API
 
-Please test with this HTML file in your browser:
+Please test with this [HTML file](html_files/0-main.html) in your browser:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +42,7 @@ Please test with this HTML file in your browser:
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
 
-Please test with this HTML file in your browser:
+Please test with this [HTML file](html_files/1-main.html) in your browser:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +66,7 @@ Please test with this HTML file in your browser:
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
 
-Please test with this HTML file in your browser:
+Please test with this [HTML file](html_files/2-main.html) in your browser:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -91,7 +91,7 @@ Please test with this HTML file in your browser:
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
 
-Please test with this HTML file in your browser:
+Please test with this [HTML file](html_files/3-main.html) in your browser:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -123,7 +123,7 @@ Please test with this HTML file in your browser:
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
 
-Please test with this HTML file in your browser:
+Please test with this [HTML file](html_files/4-main.html) in your browser:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -158,7 +158,7 @@ Please test with this HTML file in your browser:
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
 
-Please test with this HTML file in your browser:
+Please test with this [HTML file](html_files/5-main.html) in your browser:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -188,7 +188,7 @@ Please test with this HTML file in your browser:
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
 
-Please test with this HTML file in your browser:
+Please test with this [HTML file](html_files/6-main.html) in your browser:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -216,7 +216,7 @@ Please test with this HTML file in your browser:
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
 
-Please test with this HTML file in your browser:
+Please test with this [HTML file](html_files/7-main.html) in your browser:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -244,7 +244,7 @@ Please test with this HTML file in your browser:
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
 
-Please test with this HTML file in your browser:
+Please test with this [HTML file](html_files/8-main.html) in your browser:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -274,7 +274,7 @@ Please test with this HTML file in your browser:
 - You must use the jQuery API
 - Your script must work when it is imported from the `HEAD` tag
 
-Please test with this HTML file in your browser:
+Please test with this [HTML file](html_files/9-main.html) in your browser:
 ```html
 <!DOCTYPE html>
 <html lang="en">
