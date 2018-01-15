@@ -298,7 +298,30 @@ Please test with this [HTML file](html_files/9-main.html) in your browser:
 ```
 
 ### Advanced
-**[100-script.js](100-script.js)** - 
+**[100-script.js](100-script.js)** - Write a Javascript script that updates the text color of the HTML tag `HEADER` to red (`#FF0000`):
+- You must use `document.querySelector` to select the HTML tag
+- You can’t use the jQuery API
+- Your script must work when it is imported from the `HEAD` tag
+
+Please test with this [HTML file](html_files/100-main.html) in your browser:
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script type="text/javascript" src="100-script.js"></script>
+  </head>
+  <body>
+    <header>
+      First HTML page
+    </header>
+    <footer>
+      Holberton School - 2017
+    </footer>
+  </body>
+</html>
+```
+
 
 **[101-script.js](101-script.js)** - 
 
