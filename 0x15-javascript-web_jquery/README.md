@@ -19,6 +19,7 @@ An introductory project on:
 **[0-script.js](0-script.js)** - Write a Javascript script that updates the text color of the HTML tag `HEADER` to red (`#FF0000`):
 - You must use `document.querySelector` to select the HTML tag
 - You can’t use the jQuery API
+
 Please test with this HTML file in your browser:
 ```html
 <!DOCTYPE html>
@@ -40,6 +41,7 @@ Please test with this HTML file in your browser:
 **[1-script.js](1-script.js)** - Write a Javascript script that updates the text color of the HTML tag `HEADER` to red (`#FF0000`):
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
+
 Please test with this HTML file in your browser:
 ```html
 <!DOCTYPE html>
@@ -63,6 +65,7 @@ Please test with this HTML file in your browser:
 **[2-script.js](2-script.js)** - Write a Javascript script that updates the text color of the HTML tag `HEADER` to red (`#FF0000`) when the user clicks on the tag `DIV#red_header`:
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
+
 Please test with this HTML file in your browser:
 ```html
 <!DOCTYPE html>
@@ -87,6 +90,7 @@ Please test with this HTML file in your browser:
 **[3-script.js](3-script.js)** - Write a Javascript script that adds the class red to the HTML tag `HEADER` to red (`#FF0000`) when the user clicks on the tag `DIV#red_header`:
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
+
 Please test with this HTML file in your browser:
 ```html
 <!DOCTYPE html>
@@ -118,6 +122,7 @@ Please test with this HTML file in your browser:
 - If the current class is `red`, when the user click on `DIV#toggle_header`, the class must be updated to `green`, and vice-versa.
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
+
 Please test with this HTML file in your browser:
 ```html
 <!DOCTYPE html>
@@ -152,6 +157,7 @@ Please test with this HTML file in your browser:
 - The new element must be added to `UL.my_list`
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
+
 Please test with this HTML file in your browser:
 ```html
 <!DOCTYPE html>
@@ -181,6 +187,7 @@ Please test with this HTML file in your browser:
 **[6-script.js](6-script.js)** - Write a Javascript script that updates the text of the HTML tag `HEADER` to `New Header!!!` when the user clicks on `DIV#update_header`
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
+
 Please test with this HTML file in your browser:
 ```html
 <!DOCTYPE html>
@@ -208,6 +215,7 @@ Please test with this HTML file in your browser:
 - The name must be displayed in the HTML tag `DIV#character`
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
+
 Please test with this HTML file in your browser:
 ```html
 <!DOCTYPE html>
@@ -232,9 +240,10 @@ Please test with this HTML file in your browser:
 ```
 
 **[8-script.js](8-script.js)** - Write a Javascript script that fetches and lists all movie titles by using this URL: `https://swapi.co/api/films/?format=json`
-- All movie titles must be list in the HTML tag `UL#list_movies`
+- All movie titles must be listed in the HTML tag `UL#list_movies`
 - You can’t use `document.querySelector` to select the HTML tag
 - You must use the jQuery API
+
 Please test with this HTML file in your browser:
 ```html
 <!DOCTYPE html>
@@ -260,9 +269,11 @@ Please test with this HTML file in your browser:
 ```
 
 **[9-script.js](9-script.js)** - Write a Javascript script that fetches and prints the San Francisco wind speed by using this URL: `https://query.yahooapis.com/v1/public/yql?q=select%20wind%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22San%20Francisco%2C%20CA%22)&format=json`
-- The wind speed must be display in the HTML tag `DIV#sf_wind_speed`
+- The wind speed must be displayed in the HTML tag `DIV#sf_wind_speed`
 - You can’t use `document.querySelector` to select the HTML tag
-- You must use the jQuery API You script must be work when it imported from the `HEAD` tag
+- You must use the jQuery API
+- Your script must work when it is imported from the `HEAD` tag
+
 Please test with this HTML file in your browser:
 ```html
 <!DOCTYPE html>
